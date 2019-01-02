@@ -2,11 +2,5 @@
 
 bashrc:
 
-export GIT_PS1_SHOWDIRTYSTATE=1
-
-# '\u' adds the name of the current user to the prompt
-# '\$(__git_ps1)' adds git-related stuff
-# '\W' adds the name of the current directory
-export PS1="$red\u$green\$(__git_ps1)$blue \W
-$ $reset"
+export PS1="\[\033[38;5;11m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr0)\]\[\033[38;5;6m\][\w]:\[$(tput sgr0)\]\[\033[38;5;15m\]\$(__git_ps1)$blue \[$(tput sgr0)\]"
 
